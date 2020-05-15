@@ -1,0 +1,54 @@
+@import '../../master';
+
+.contact-container {
+    @extend .master-page-display;
+
+    @media screen and (min-width: $break_point) {
+        height: 100%;
+        padding-top: 10px;
+        width: 40%;
+    }
+    .container-form {
+        @media screen and (min-width: $break_point) {
+            width: 100%;
+        }
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @media screen and (min-width: $break_point) {
+            height: 300px;
+        }
+        h1 {
+            text-align: center;
+            @media screen and (min-width: $break_point) {
+                text-align: left;
+                margin-left: 55px;
+                font-size: 3em;
+                margin-bottom: 30px;
+            }
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+
+            .icon {
+                margin: 20px 10px !important;
+            }
+
+            h3 {
+                margin: 0 auto;
+                text-align: center;
+
+                @media screen and (min-width: $break_point) {
+                    margin: unset;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@import '../../master';
+
+.ui.card.history-item {
+    margin: 0 0 $padding_value !important;
+    border-radius: $padding_value;
+    width: 100% !important;
+
+    @media screen and (min-width: $break_point) {
+        width: 50% !important;
+        margin: 0 auto !important;
+    }
+
+    .image {
+        img {
+            border-top-left-radius: $padding_value;
+            border-top-right-radius: $padding_value;
+        }
+    }
+}

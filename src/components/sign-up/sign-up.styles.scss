@@ -1,0 +1,9 @@
+@import '../../master';
+
+.sign-up {
+    @extend .master-page-display;
+
+    .title {
+        margin: ($padding_value * 0.5) 0;
+    }
+}

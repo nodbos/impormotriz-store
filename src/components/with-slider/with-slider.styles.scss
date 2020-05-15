@@ -1,0 +1,53 @@
+@import '../../master';
+
+.progress-bar {
+    width: 100%;
+    border-radius: $padding_value;
+
+    .meter {
+        height: 5px;
+        background: rgba($color: #121212, $alpha: 0.3);
+        padding: 0;
+        width: 0%;
+        z-index: 5;
+        position: fixed;
+
+        animation: center-animate 5.5s infinite;
+        -webkit-animation: center-animate 5.5s infinite;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    @keyframes center-animate {
+        0% {
+            width: 10px;
+        }
+        100% {
+            width: 90%;
+        }
+    }
+}
+
+.arrow {
+    background-color: rgba($color: #ffffff, $alpha: 0.3);
+    border-radius: $padding_value;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 5;
+
+    &.right {
+        right: -$padding_value/2;
+    }
+
+    &.left {
+        left: -$padding_value/2;
+    }
+
+    .arrow-icon {
+        color: $color_primary;
+    }
+}

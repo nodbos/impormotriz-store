@@ -1,0 +1,21 @@
+@import '../../master';
+
+.products-show-all {
+    display: flex;
+    flex-direction: column;
+    padding: $padding_value;
+
+    .title {
+        font-size: 28px;
+        margin: $padding_value auto ($padding_value * 3);
+    }
+
+    .ui.preview {
+        justify-content: space-between;
+        @media screen and (min-width: $break_point) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+@import '../../master';
+
+.product-item {
+    width: 100%;
+
+    @media screen and (max-width: $break_point) {
+        width: 100% !important;
+    }
+
+    .product-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: $padding_value;
+
+        .header {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    }
+
+    .product-button {
+        margin: unset !important;
+    }
+    .semantic-price {
+        font-size: 1.2em;
+        margin: auto 0;
+        color: #121212;
+    }
+
+    .semantic-more {
+        line-height: 0.7 !important;
+        margin: 0 !important;
+    }
+}
+
+.ui.card.product-item {
+    margin: 0 !important;
+
+    @media screen and (min-width: $break_point) {
+        margin: 0 ($padding_value * 0.5) !important;
+    }
+    @media screen and (max-width: $break_point) {
+        margin-bottom: $padding_value !important;
+    }
+}

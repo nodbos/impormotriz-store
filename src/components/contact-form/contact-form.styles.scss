@@ -1,0 +1,18 @@
+@import '../../master';
+
+.contact-form {
+    @extend .master-page-display;
+    margin-top: $padding_value;
+
+    @media screen and (min-width: $break_point) {
+        margin-top: unset;
+    }
+
+    .group {
+        margin: $padding_value 0 !important;
+
+        .ui.input {
+            width: 100% !important;
+        }
+    }
+}

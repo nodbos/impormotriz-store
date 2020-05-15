@@ -1,0 +1,28 @@
+@import '../../master';
+
+.product-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $padding_value;
+
+    .back-button {
+        top: 0;
+        margin-top: 140px !important;
+    }
+
+    .title {
+        font-size: 38px;
+        margin: 10px auto 20px;
+    }
+
+    .ui.grid {
+        margin: 0 !important;
+
+        @media screen and (min-width: 800px) {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}

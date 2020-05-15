@@ -1,0 +1,24 @@
+@import '../../master';
+
+.custom-div {
+    height: 68vh;
+
+    @media screen and (min-width: 800px) {
+        height: 82vh;
+    }
+}
+
+.home-page {
+    padding: $padding_value;
+
+    div {
+        border-radius: $padding_value/2;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .awssld {
+        height: 74vh;
+    }
+}

@@ -1,0 +1,29 @@
+@import '../../master';
+
+.contact-map {
+    border-radius: $padding_value;
+    height: 380px;
+    width: 100%;
+
+    @media screen and (min-width: $break_point) {
+        padding-left: $padding_value;
+        width: 60%;
+    }
+}
+
+.nav-style {
+    position: absolute;
+    top: 36;
+    left: 0;
+    padding: $padding_value * 0.5;
+}
+
+.pin-style {
+    cursor: pointer;
+    fill: $color_error;
+    stroke: none;
+}
+
+.shop-info-title {
+    text-align: center;
+}

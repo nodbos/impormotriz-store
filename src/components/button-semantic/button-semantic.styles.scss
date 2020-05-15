@@ -1,0 +1,76 @@
+@import '../../master';
+
+@mixin content($color-default, $color-main) {
+    background-color: $color-default;
+    color: $color-main;
+
+    &:hover {
+        background-color: darken(
+            $color-default,
+            $color_value_exchange
+        ) !important;
+
+        color: darken(
+            $color-main,
+            $color_value_exchange/2
+        ) !important;
+    }
+}
+
+.first-color {
+    @include content($color_primary, $color_terciary);
+}
+
+.second-color {
+    @include content($color_secondary, $color_quaternary);
+}
+
+.back-button {
+    left: 0 !important;
+    margin-left: 40px !important;
+    margin-top: 30px !important;
+    position: absolute !important;
+    width: 15% !important;
+
+    @media screen and (max-width: $break_point) {
+        left: unset !important;
+        top: 0 !important;
+        width: 30% !important;
+        margin: 150px 20px 0 !important;
+    }
+}
+
+@mixin contentMargin($product-margin) {
+    margin: $product-margin !important;
+}
+
+.product-margin {
+    @include contentMargin(unset);
+}
+
+.semantic-button {
+    height: 50px;
+    width: 100%;
+    background-image: none;
+    border-radius: 0.28571429rem;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1em;
+    min-height: 1em;
+    outline: 0;
+    padding: 0.78571429em 1.5em 0.78571429em;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    vertical-align: baseline;
+    margin: $padding_value auto 0;
+
+    -webkit-box-shadow: $shadow_value;
+    -moz-box-shadow: $shadow_value;
+    box-shadow: $shadow_value;
+}

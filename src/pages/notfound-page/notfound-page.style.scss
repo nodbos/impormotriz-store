@@ -1,0 +1,44 @@
+@import '../../master';
+
+.not-found-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: $padding_value;
+
+    @media screen and (max-width: 1200px) {
+        flex-direction: column;
+    }
+
+    .error {
+        font-size: 18em;
+        margin: $padding_value 0 0 0;
+        color: $color_secondary;
+
+        @media screen and (max-width: 800px) {
+            font-size: 10em;
+        }
+    }
+
+    .error-title {
+        font-size: 3em;
+        margin-bottom: $padding_value * 2;
+        margin: 0 0 0 0;
+
+        @media screen and (max-width: 800px) {
+            font-size: 2em;
+        }
+    }
+
+    .error-message {
+        font-size: 2em;
+        margin-bottom: $padding_value * 2;
+        margin: $padding_value 0 $padding_value * 3 0;
+
+        @media screen and (max-width: 800px) {
+            font-size: 1em;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Roboto;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.space-div {
+    height: 115px;
+}
+.styles_badge__1y5yc {
+    bottom: 6.5em;
+}
+@media screen and (min-width: 1200px) {
+    .styles_badge__1y5yc {
+        bottom: 1.5em;
+    }
+}

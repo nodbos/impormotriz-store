@@ -1,0 +1,7 @@
+@import '../../master';
+
+.sign-in-and-sign-up {
+    display: flex;
+    flex-direction: column;
+    padding: $padding_value;
+}

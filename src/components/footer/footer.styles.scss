@@ -1,0 +1,57 @@
+@import '../../master';
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: $break_point) {
+        display: none;
+    }
+
+    .contact-desktop {
+        height: 450px;
+        padding: $padding_value;
+        background-color: #191919;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .container-form {
+            background-color: #191919;
+            color: white;
+        }
+
+        @media screen and (min-width: $break_point) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    }
+
+    .footer-information {
+        height: 100px;
+        padding: $padding_value ($padding_value * 3);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $color_terciary;
+
+        .social-container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            cursor: pointer;
+            .social-item {
+                margin: 0 $padding_value;
+            }
+        }
+
+        .copyright {
+            color: $color_quaternary;
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@import '../../master';
+
+.header-component {
+    background-color: $color_primary;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+    width: 100%;
+
+    -webkit-box-shadow: $shadow_value;
+    -moz-box-shadow: $shadow_value;
+    box-shadow: $shadow_value;
+
+    .logo-container {
+        width: 100%;
+        margin: $padding_value 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        @media screen and (min-width: $break_point) {
+            margin: 0;
+            justify-content: space-between;
+        }
+
+        .logo {
+            @media screen and (min-width: $break_point) {
+                margin: $padding_value ($padding_value * 1.5);
+            }
+        }
+
+        img {
+            height: 135px;
+            width: 240px;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@import '../../master';
+
+.products-directory {
+    width: 100%;
+    padding: $padding_value;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: $padding_value * 3;
+}

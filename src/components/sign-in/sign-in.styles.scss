@@ -1,0 +1,11 @@
+@import '../../master';
+
+.sign-in {
+    @extend .master-page-display;
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
