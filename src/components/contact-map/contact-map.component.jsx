@@ -9,7 +9,9 @@ import ShopInfo from './shop-info.component';
 
 import './contact-map.styles.scss';
 
-const TOKEN = process.env.REACT_APP_MAP_TOKEN;
+//const TOKEN = process.env.REACT_APP_MAP_TOKEN;
+const TOKEN =
+    'pk.eyJ1IjoiZmVsaXBlYXZlYiIsImEiOiJjazlzeGx4Y3QxYTNjM2dwNzBhOWZ4OWZvIn0.reeGflumNXQ-UFZ4o29GJg';
 
 const SHOP_ADDRESS = {
     shop: 'Impormotriz',

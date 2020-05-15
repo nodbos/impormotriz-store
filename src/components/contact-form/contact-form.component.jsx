@@ -6,7 +6,7 @@ import './contact-form.styles.scss';
 
 class ContactForm extends Component {
     state = {
-        adminEmail: process.env.REACT_APP_EMAIL,
+        adminEmail: 'USE_ADMIN_EMAIL@gmail.com', //process.env.REACT_APP_EMAIL
         name: '',
         email: '',
         message: '',

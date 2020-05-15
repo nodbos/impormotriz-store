@@ -3,7 +3,7 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const config = {
-    apiKey: 'AIzaSyCcyUU3r1mf0QcJ4KNynTXBeOn4xedQRaY',
+    apiKey: 'AIzaSyCcyUU3r1mf0QcJ4KNynTXBeOn4xedQRaY', //process.env.REACT_APP_FIREBASE
     authDomain: 'impormotriz-shop-db.firebaseapp.com',
     databaseURL: 'https://impormotriz-shop-db.firebaseio.com',
     projectId: 'impormotriz-shop-db',

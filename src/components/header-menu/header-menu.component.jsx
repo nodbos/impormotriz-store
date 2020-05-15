@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 import { Menu } from 'semantic-ui-react';
 import {
     IoIosHome,
-    IoMdArrowRoundBack,
-    IoMdArrowRoundForward,
+    //IoMdArrowRoundBack,
+    //IoMdArrowRoundForward,
     IoIosCall,
     IoIosBrowsers,
     IoIosBody,
@@ -17,6 +17,7 @@ import { IconContext } from 'react-icons';
 import { createStructuredSelector } from 'reselect';
 import { selectActiveMenuItem } from '../../redux/menu/menu.selector';
 
+import 'semantic-ui-css/semantic.min.css';
 import './header-menu.styles.scss';
 
 const mapStateToProps = createStructuredSelector({
@@ -45,7 +46,7 @@ const titulos = [
 ];
 
 const iconSize = 1.6;
-const menuItemsWidth = 5;
+const menuItemsWidth = 4;
 
 const HeaderMenu = ({
     currentUser,
@@ -126,7 +127,12 @@ const HeaderMenu = ({
                         <p>{titulos[2]}</p>
                     </div>
                 </Menu.Item>
-                {currentUser ? (
+            </Menu>
+        </div>
+    );
+};
+
+/*{currentUser ? (
                     <Menu.Item
                         onClick={() => {
                             signOutStart();
@@ -161,11 +167,7 @@ const HeaderMenu = ({
                             <p>{titulos[3]}</p>
                         </div>
                     </Menu.Item>
-                )}
-            </Menu>
-        </div>
-    );
-};
+                )}*/
 
 export default connect(
     mapStateToProps,

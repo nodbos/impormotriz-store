@@ -35,7 +35,8 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-const PHONE_NUMBER = parseInt(process.env.REACT_APP_PHONE_NUMBER);
+//const PHONE_NUMBER = parseInt(process.env.REACT_APP_PHONE_NUMBER);
+const PHONE_NUMBER = 573187157368;
 
 if (!QUERY_MATCHES['sm']) {
     console.log('cellphone', QUERY_MATCHES);
@@ -57,7 +58,7 @@ class App extends Component {
             : [];
 
     _uploadDataToFirebase = toUpload => {
-        console.log(PRODUCTO_DATA);
+        //console.log(PRODUCTO_DATA);
 
         addCollectionAndDocuments(
             'products',
