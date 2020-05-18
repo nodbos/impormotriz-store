@@ -3,10 +3,10 @@ $padding_value: 20px;
 $break_point: 1200px;
 $shadow_value: 0 0 5px 0 rgba(34, 36, 38, 0.3);
 
-$color_primary: #fbbd08;
-$color_secondary: #3d3dbb;
-$color_terciary: #121212;
-$color_quaternary: #ffffff;
+$color_primary: #3d3dbb;
+$color_secondary: #fbbd08;
+$color_terciary: #ffffff;
+$color_quaternary: #121212;
 $color_error: #b42205;
 
 $color_secondary_light: lighten(
@@ -28,7 +28,7 @@ $color_secondary_light: lighten(
 
     .container-form {
         width: 100%;
-        background: $color_quaternary;
+        background: $color_terciary;
         margin: 0 auto $padding_value;
         padding: $padding_value * 2;
         border-radius: $padding_value;

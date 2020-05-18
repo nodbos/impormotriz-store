@@ -3,11 +3,10 @@
 .products-show-all {
     display: flex;
     flex-direction: column;
-    padding: $padding_value;
 
     .title {
-        font-size: 28px;
-        margin: $padding_value auto ($padding_value * 3);
+        margin: $padding_value 0 $padding_value * 2;
+        text-align: right;
     }
 
     .ui.preview {

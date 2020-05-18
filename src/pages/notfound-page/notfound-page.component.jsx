@@ -8,7 +8,7 @@ const NotFoundPage = () => (
         <ButtonBack />
         <div className='contact-container'>
             <div className='container-form'>
-                <h1 className='error'>404</h1>
+                <div className='error' />
                 <h3 className='error-title'>Página no encontrada</h3>
                 <p className='error-message'>
                     Por favor presiona el botón volver

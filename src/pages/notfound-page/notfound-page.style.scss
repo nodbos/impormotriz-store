@@ -14,7 +14,14 @@
 
     .error {
         font-size: 18em;
-        margin: $padding_value 0 0 0;
+        background-image: url('https://i.imgur.com/qIufhof.png');
+        background-size: cover;
+        background-position: center;
+        width: 50vh;
+        height: 50vh;
+        margin: 0 auto;
+        margin-top: -$padding_value * 2;
+        margin-bottom: $padding_value/2;
         color: $color_secondary;
 
         @media screen and (max-width: 800px) {
@@ -34,8 +41,7 @@
 
     .error-message {
         font-size: 2em;
-        margin-bottom: $padding_value * 2;
-        margin: $padding_value 0 $padding_value * 3 0;
+        margin: $padding_value/2 0 0 0;
 
         @media screen and (max-width: 800px) {
             font-size: 1em;

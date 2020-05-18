@@ -49,26 +49,29 @@ const mapStateToProps = (state, ownProps) => {
     };
 };
 
-const ProductPage = ({ product = DEFAULT_PRODUCT }) => {
+const ProductPage = ({ product }) => {
+    //= DEFAULT_PRODUCT
     //console.log(product);
 
-    const { title, articulos } = product;
+    if (product !== undefined) {
+        const { title, articulos } = product;
 
-    return (
-        <div className='product-page'>
-            <ButtonBack />
-            <h2 className='title'>{title}</h2>
-            <div className='ui equal width grid'>
-                {articulos.map(articulo => (
-                    <ProductItem
-                        key={articulo.id}
-                        item={articulo}
-                        title={title}
-                    />
-                ))}
+        return (
+            <div className='product-page'>
+                <ButtonBack />
+                <h1 className='title'>{title}</h1>
+                <div className='ui equal width grid'>
+                    {articulos.map(articulo => (
+                        <ProductItem
+                            key={articulo.id}
+                            item={articulo}
+                            title={title}
+                        />
+                    ))}
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
 };
 
 export default connect(mapStateToProps)(ProductPage);

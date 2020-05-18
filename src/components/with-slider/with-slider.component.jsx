@@ -21,7 +21,7 @@ const responsive = {
     },
 };
 
-const iconSize = 5;
+const iconSize = 3;
 
 const CustomArrow = ({ onClick, side }) => {
     return (

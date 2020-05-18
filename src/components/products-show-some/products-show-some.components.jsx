@@ -12,10 +12,20 @@ const mapStateToProps = createStructuredSelector({
 });
 
 const ProductsShowSome = ({ products }) => {
+    const newProduct = products.map(product => {
+        if (product.title === 'Todo') {
+            return null;
+        }
+        return product;
+    });
+    if (newProduct[0] === null) {
+        newProduct.shift();
+    }
+
     return (
         <div className='product-show-some'>
             <ButtonBack />
-            {products.map(({ id, ...otherProductProps }) => {
+            {newProduct.map(({ id, ...otherProductProps }) => {
                 return (
                     <ProductsShowAll
                         key={id}

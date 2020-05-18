@@ -1,12 +1,25 @@
-import React, { Component } from 'react';
+import React, { Component, lazy, Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchProductsStart } from '../../redux/shop/shop.actions';
-import ProductDirectoryContainer from '../../components/products-directory/products-directory.container';
-import ProductPageContainer from '../product-page/product.container';
-import ProductSpecificContainer from '../../components/products-show-some/products-show-some.container';
+import Spinner from '../../components/spinner/spinner.component';
+import ErrorBoundary from '../../components/error/error-boundary.component';
 
 import './shop-page.styles.scss';
+
+const ProductDirectoryContainer = lazy(() =>
+    import(
+        '../../components/products-directory/products-directory.container'
+    )
+);
+const ProductPageContainer = lazy(() =>
+    import('../product-page/product.container')
+);
+const ProductSpecificContainer = lazy(() =>
+    import(
+        '../../components/products-show-some/products-show-some.container'
+    )
+);
 
 const mapDispatchToProps = dispatch => ({
     fetchProductsStart: () =>
@@ -24,21 +37,25 @@ class ShopPage extends Component {
         return (
             <div className='shop-page'>
                 <Switch>
-                    <Route
-                        exact
-                        path={`${match.path}`}
-                        component={ProductDirectoryContainer}
-                    />
-                    <Route
-                        exact
-                        path={`${match.path}/todo`}
-                        component={ProductSpecificContainer}
-                    />
-                    <Route
-                        exact
-                        path={`${match.path}/:productId`}
-                        component={ProductPageContainer}
-                    />
+                    <ErrorBoundary>
+                        <Suspense fallback={<Spinner />}>
+                            <Route
+                                exact
+                                path={`${match.path}`}
+                                component={ProductDirectoryContainer}
+                            />
+                            <Route
+                                exact
+                                path={`${match.path}/todo`}
+                                component={ProductSpecificContainer}
+                            />
+                            <Route
+                                exact
+                                path={`${match.path}/:productId`}
+                                component={ProductPageContainer}
+                            />
+                        </Suspense>
+                    </ErrorBoundary>
                 </Switch>
             </div>
         );
