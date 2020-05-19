@@ -4,7 +4,7 @@ import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import { connect } from 'react-redux';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selector';
-import { ReactComponent as Logo } from '../../assets/svg/impormotriz_logo_2.svg';
+import { ReactComponent as Logo } from '../../assets/svg/impormotriz_logo_3.svg';
 import { createStructuredSelector } from 'reselect';
 import HeaderMenu from '../header-menu/header-menu.component';
 

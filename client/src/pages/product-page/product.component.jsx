@@ -6,7 +6,7 @@ import ButtonBack from '../../components/button-back/button-back.component';
 
 import './product.styles.scss';
 
-const DEFAULT_PRODUCT = {
+/*const DEFAULT_PRODUCT = {
     articulos: [
         {
             cantidad: 18,
@@ -39,7 +39,7 @@ const DEFAULT_PRODUCT = {
     routeName: 'error',
     size: 'small',
     title: 'error',
-};
+};*/
 
 const mapStateToProps = (state, ownProps) => {
     return {

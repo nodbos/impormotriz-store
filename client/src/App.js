@@ -10,7 +10,7 @@ import { selectCurrentUser } from './redux/user/user.selector';
 import { checkUserSession } from './redux/user/user.actions';
 import WhatsappBadge from 'react-whatsapp-badge';
 import WhatsappLogo from './assets/img/whatsapp.png';
-import QUERY_MATCHES from './queries.utils';
+//import QUERY_MATCHES from './queries.utils';
 
 import PRODUCTO_DATA from './firebase/product.data';
 import { addCollectionAndDocuments } from './firebase/firebase.utils';
@@ -118,9 +118,9 @@ class App extends Component {
                     <div className='space-div' />
                     <Header queryMatches={true} renderLogo={true} />
                 </div>
-                <Switch>
-                    <ErrorBoundary>
-                        <Suspense fallback={<Spinner />}>
+                <ErrorBoundary>
+                    <Suspense fallback={<Spinner />}>
+                        <Switch>
                             <Route
                                 exact
                                 path='/'
@@ -156,15 +156,18 @@ class App extends Component {
                                     )
                                 }
                             />
-                        </Suspense>
-                    </ErrorBoundary>
-                </Switch>
-                <WhatsappBadge
-                    text='Cómo podemos ayudarte?'
-                    phone={PHONE_NUMBER}
-                    image={WhatsappLogo}
-                    className='whatsapp'
-                />
+                            <Route component={NotFoundPage} />
+                        </Switch>
+                    </Suspense>
+                </ErrorBoundary>
+                <div className='whatsapp'>
+                    <WhatsappBadge
+                        text='Cómo podemos ayudarte?'
+                        phone={PHONE_NUMBER}
+                        image={WhatsappLogo}
+                        style={{ bottom: '8.5em' }}
+                    />
+                </div>
                 <Suspense fallback={<Spinner />}>
                     <Footer />
                 </Suspense>
