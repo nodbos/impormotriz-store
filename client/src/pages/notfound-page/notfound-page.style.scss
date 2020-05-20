@@ -7,25 +7,32 @@
     text-align: center;
     margin: 0 auto;
     padding: $padding_value;
+    margin-bottom: $padding_value * 3;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (min-width: $break_point) {
+        margin-bottom: unset;
+    }
+
+    @media screen and (max-width: $break_point) {
         flex-direction: column;
     }
 
     .error {
-        font-size: 18em;
         background-image: url('../../assets/img/404.png');
         background-size: cover;
         background-position: center;
-        width: 50vh;
-        height: 50vh;
+        width: 40vh;
+        height: 40vh;
         margin: 0 auto;
-        margin-top: -$padding_value * 2;
+        margin-top: -$padding_value;
         margin-bottom: $padding_value/2;
         color: $color_secondary;
 
-        @media screen and (max-width: 800px) {
+        @media screen and (min-width: $break_point) {
             font-size: 10em;
+            width: 50vh;
+            height: 50vh;
+            margin-top: -$padding_value * 2;
         }
     }
 

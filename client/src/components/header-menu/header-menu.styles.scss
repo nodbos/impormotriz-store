@@ -73,6 +73,16 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+
+                @media screen and (min-width: $break_point) {
+                    svg {
+                        height: 2.2em;
+                        width: 2.2em;
+                    }
+                    p {
+                        font-size: 1.4em;
+                    }
+                }
             }
         }
     }

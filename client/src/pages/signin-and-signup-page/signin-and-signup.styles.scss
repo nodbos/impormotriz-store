@@ -4,4 +4,9 @@
     display: flex;
     flex-direction: column;
     padding: $padding_value;
+    margin-bottom: $padding_value * 3;
+
+    @media screen and (min-width: $break_point) {
+        margin-bottom: unset;
+    }
 }

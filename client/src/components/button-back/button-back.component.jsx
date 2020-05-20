@@ -1,17 +1,16 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { withRouter } from 'react-router';
 import ButtonSemantic from '../button-semantic/button-semantic.component';
 
-const ButtonBack = () => {
-    let history = useHistory();
+const ButtonBack = ({ history }) => {
     return (
         <ButtonSemantic
             backButton
             secondColorCombination
-            onClick={() => history.goBack()}>
+            onClick={() => history.go(-1)}>
             Volver
         </ButtonSemantic>
     );
 };
 
-export default ButtonBack;
+export default withRouter(ButtonBack);

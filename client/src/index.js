@@ -6,6 +6,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { BrowserRouter } from 'react-router-dom';
 import { store, persistor } from './redux/store';
 import WithScroll from './components/with-scroll/with-scroll.component';
+import * as serviceWorker from './serviceWorker';
 
 import './index.css';
 
@@ -23,3 +24,5 @@ ReactDOM.render(
     </Provider>,
     document.getElementById('root')
 );
+
+serviceWorker.register();

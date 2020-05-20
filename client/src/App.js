@@ -15,7 +15,7 @@ import WhatsappLogo from './assets/img/whatsapp.png';
 import PRODUCTO_DATA from './firebase/product.data';
 import { addCollectionAndDocuments } from './firebase/firebase.utils';
 
-import './App.css';
+import './App.scss';
 
 const Footer = lazy(() =>
     import('./components/footer/footer.component')

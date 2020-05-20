@@ -3,13 +3,18 @@
 .custom-div {
     height: 68vh;
 
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: $break_point) {
         height: 82vh;
     }
 }
 
 .home-page {
     padding: $padding_value;
+    margin-bottom: $padding_value * 3;
+
+    @media screen and (min-width: $break_point) {
+        margin-bottom: unset;
+    }
 
     div {
         border-radius: $padding_value/2;

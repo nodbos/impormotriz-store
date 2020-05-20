@@ -1,6 +1,7 @@
 import React from 'react';
-
 import HistoriesDirectory from '../../components/histories-directory/histories-directory.component';
+
+import './us-page.style.scss';
 
 const UsPage = () => {
     return (

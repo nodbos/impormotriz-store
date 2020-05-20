@@ -1,0 +1,25 @@
+@import './master';
+
+* {
+    box-sizing: border-box;
+    body {
+        font-family: Roboto;
+        margin: 0;
+        background-color: darken(
+            $color_terciary,
+            $color_value_exchange/2
+        );
+    }
+    a {
+        text-decoration: none;
+        color: $color_quaternary;
+    }
+    .App {
+        .space-div {
+            height: 115px;
+        }
+        .whatsapp .styles_badge__1y5yc {
+            bottom: 6.5rem;
+        }
+    }
+}

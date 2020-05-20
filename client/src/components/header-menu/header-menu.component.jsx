@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 import { Menu } from 'semantic-ui-react';
 import {
     IoIosHome,
-    IoMdArrowRoundBack,
-    IoMdArrowRoundForward,
+    //IoMdArrowRoundBack,
+    //IoMdArrowRoundForward,
     IoIosCall,
     IoIosBrowsers,
     IoIosBody,
@@ -46,7 +46,7 @@ const titulos = [
 ];
 
 const iconSize = 1.6;
-const menuItemsWidth = 5;
+const menuItemsWidth = 4;
 
 const HeaderMenu = ({
     currentUser,
@@ -127,7 +127,12 @@ const HeaderMenu = ({
                         <p>{titulos[2]}</p>
                     </div>
                 </Menu.Item>
-                {currentUser ? (
+            </Menu>
+        </div>
+    );
+};
+
+/*{currentUser ? (
                     <Menu.Item
                         onClick={() => {
                             signOutStart();
@@ -162,11 +167,7 @@ const HeaderMenu = ({
                             <p>{titulos[3]}</p>
                         </div>
                     </Menu.Item>
-                )}
-            </Menu>
-        </div>
-    );
-};
+                )}*/
 
 export default connect(
     mapStateToProps,

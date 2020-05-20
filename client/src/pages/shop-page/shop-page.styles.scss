@@ -2,4 +2,8 @@
 
 .shop-page {
     margin-bottom: $padding_value * 3;
+
+    @media screen and (min-width: $break_point) {
+        margin-bottom: unset;
+    }
 }
