@@ -46,11 +46,14 @@ const WithSlider = ({ children }) => {
     return (
         <div className='progress-bar'>
             <Carousel
-                swipeable={true}
-                draggable={true}
-                infinite={true}
-                autoPlay={true}
+                additionalTransfrom={0}
+                autoPlay
                 autoPlaySpeed={5000}
+                draggable
+                infinite
+                responsive={responsive}
+                showDots={false}
+                swipeable
                 customRightArrow={
                     <CustomArrow
                         side='right'
@@ -62,8 +65,7 @@ const WithSlider = ({ children }) => {
                         side='left'
                         aria-label='Go to next slide'
                     />
-                }
-                responsive={responsive}>
+                }>
                 {children}
             </Carousel>
         </div>

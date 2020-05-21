@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import { connect } from 'react-redux';
 //import { fetchProductsStart } from '../../redux/shop/shop.actions';
 import WithSlider from '../../components/with-slider/with-slider.component';
+import imgTest from '../../assets/img/impormotriz_exterior_1.jpg';
 
 import './home-page.styles.scss';
 
@@ -30,9 +31,9 @@ class HomePage extends Component {
         return (
             <div className='home-page'>
                 <WithSlider>
-                    <CustomDiv link='https://via.placeholder.com/2000x1400/e0e0e0/ffffff/?text=Slide1' />
-                    <CustomDiv link='https://via.placeholder.com/2000x1400/e0e0e0/ffffff/?text=Slide2' />
-                    <CustomDiv link='https://via.placeholder.com/2000x1400/e0e0e0/ffffff/?text=Slide3' />
+                    <CustomDiv link={imgTest} />
+                    <CustomDiv link={imgTest} />
+                    <CustomDiv link={imgTest} />
                 </WithSlider>
             </div>
         );

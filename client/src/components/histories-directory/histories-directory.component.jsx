@@ -1,6 +1,7 @@
 import React from 'react';
 import HistoryItem from '../history-item/history-item.components';
 import WithSlider from '../with-slider/with-slider.component';
+import imgTest from '../../assets/img/impormotriz_exterior_1.jpg';
 
 import './histories-directory.styles.scss';
 
@@ -8,20 +9,17 @@ const HISTORIES_DATA = [
     {
         title: 'Titulo',
         description: 'Eu quis consectetur non exercitation.',
-        imageUrl:
-            'https://via.placeholder.com/2000x1400/e0e0e0/ffffff/?text=History',
+        imageUrl: imgTest,
     },
     {
         title: 'Titulo',
         description: 'Eu quis consectetur non exercitation.',
-        imageUrl:
-            'https://via.placeholder.com/2000x1400/e0e0e0/ffffff/?text=History',
+        imageUrl: imgTest,
     },
     {
         title: 'Titulo',
         description: 'Eu quis consectetur non exercitation.',
-        imageUrl:
-            'https://via.placeholder.com/2000x1400/e0e0e0/ffffff/?text=History',
+        imageUrl: imgTest,
     },
 ];
 

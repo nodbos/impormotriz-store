@@ -9,7 +9,9 @@ import ShopInfo from './shop-info.component';
 
 import './contact-map.styles.scss';
 
-const TOKEN = process.env.REACT_APP_MAP_TOKEN;
+const TOKEN =
+    process.env.REACT_APP_MAP_TOKEN ||
+    'pk.eyJ1IjoiZmVsaXBlYXZlYiIsImEiOiJjazlzeGx4Y3QxYTNjM2dwNzBhOWZ4OWZvIn0.reeGflumNXQ-UFZ4o29GJg';
 /*const TOKEN =
     'pk.eyJ1IjoiZmVsaXBlYXZlYiIsImEiOiJjazlzeGx4Y3QxYTNjM2dwNzBhOWZ4OWZvIn0.reeGflumNXQ-UFZ4o29GJg';*/
 
@@ -82,16 +84,16 @@ class Map extends Component {
             <div className='contact-map'>
                 <div className='container-form'>
                     <ReactMapGL
-                        scrollZoom={false}
-                        dragPan={false}
-                        touchAction={'pan-y'}
                         className='contact-map'
-                        {...viewport}
-                        width='100%'
+                        dragPan
                         height='380px'
+                        mapboxApiAccessToken={TOKEN}
                         mapStyle='mapbox://styles/mapbox/outdoors-v11'
                         onViewportChange={this._updateViewport}
-                        mapboxApiAccessToken={TOKEN}>
+                        scrollZoom={false}
+                        touchAction={'pan-y'}
+                        width='100%'
+                        {...viewport}>
                         {this._renderShopMarker(SHOP_ADDRESS, 0)}
                         {this._renderPopup()}
                         <div className='nav nav-style'>
