@@ -1,0 +1,59 @@
+@import '../../master';
+
+.social-badge {
+    width: $padding_value * 2;
+    height: $padding_value * 2;
+    border-radius: 50%;
+    margin: $padding_value/2;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 12;
+
+    -webkit-box-shadow: unset;
+    -moz-box-shadow: unset;
+    box-shadow: unset;
+
+    .social-icon {
+        margin: 7px;
+        color: $color_terciary;
+        height: 1.8em;
+        width: 1.8em;
+    }
+
+    .tooltip {
+        visibility: hidden;
+        padding: $padding_value/2;
+        width: 160px;
+        background-color: $color_primary;
+        color: $color_terciary;
+        text-align: center;
+        border-radius: $padding_value/4;
+        position: absolute;
+        top: 60px;
+        right: -5px;
+        z-index: 1;
+
+        &:after {
+            content: ' ';
+            position: absolute;
+            bottom: 100%;
+            left: 90%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent $color_primary
+                transparent;
+        }
+    }
+
+    &:hover {
+        -webkit-box-shadow: $shadow_value;
+        -moz-box-shadow: $shadow_value;
+        box-shadow: $shadow_value;
+
+        .tooltip {
+            visibility: visible;
+        }
+    }
+}

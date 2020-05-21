@@ -17,7 +17,6 @@ import { IconContext } from 'react-icons';
 import { createStructuredSelector } from 'reselect';
 import { selectActiveMenuItem } from '../../redux/menu/menu.selector';
 
-import 'semantic-ui-css/semantic.min.css';
 import './header-menu.styles.scss';
 
 const mapStateToProps = createStructuredSelector({

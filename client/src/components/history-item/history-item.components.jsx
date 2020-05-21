@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, Image } from 'semantic-ui-react';
 
-import 'semantic-ui-css/semantic.min.css';
 import './history-item.styles.scss';
 
 const HistoryItem = ({ title, description, imageUrl }) => {

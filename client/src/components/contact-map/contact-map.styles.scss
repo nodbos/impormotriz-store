@@ -2,12 +2,15 @@
 
 .contact-map {
     border-radius: $padding_value;
-    height: 380px;
+    position: unset;
+    margin: unset;
+    height: 100%;
     width: 100%;
 
     @media screen and (min-width: $break_point) {
-        padding-left: $padding_value;
-        width: 60%;
+        margin-right: $padding_value;
+        height: 450px;
+        width: 100%;
     }
 }
 

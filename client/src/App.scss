@@ -3,6 +3,7 @@
 * {
     box-sizing: border-box;
     body {
+        font-display: swap;
         margin: 0;
         background-color: darken(
             $color_terciary,
@@ -16,9 +17,6 @@
     .App {
         .space-div {
             height: 115px;
-        }
-        .whatsapp .styles_badge__1y5yc {
-            bottom: 6.5rem;
         }
     }
 }

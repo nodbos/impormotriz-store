@@ -12,8 +12,6 @@ import './contact-map.styles.scss';
 const TOKEN =
     process.env.REACT_APP_MAP_TOKEN ||
     'pk.eyJ1IjoiZmVsaXBlYXZlYiIsImEiOiJjazlzeGx4Y3QxYTNjM2dwNzBhOWZ4OWZvIn0.reeGflumNXQ-UFZ4o29GJg';
-/*const TOKEN =
-    'pk.eyJ1IjoiZmVsaXBlYXZlYiIsImEiOiJjazlzeGx4Y3QxYTNjM2dwNzBhOWZ4OWZvIn0.reeGflumNXQ-UFZ4o29GJg';*/
 
 const SHOP_ADDRESS = {
     shop: 'Impormotriz',
@@ -26,15 +24,14 @@ const SHOP_ADDRESS = {
 class Map extends Component {
     state = {
         viewport: {
+            height: '450px',
+            width: '100%',
             latitude: SHOP_ADDRESS.latitude + 0.0003,
             longitude: SHOP_ADDRESS.longitude + 0.0005,
             zoom: 17,
         },
         popupInfo: null, //SHOP_ADDRESS
-    };
-
-    _updateViewport = viewport => {
-        this.setState({ viewport });
+        mounted: false,
     };
 
     _renderShopMarker = (city, index) => {
@@ -78,29 +75,33 @@ class Map extends Component {
         );
     }
 
+    componentDidMount() {
+        this.setState({ mounted: true });
+    }
+
     render() {
-        const { viewport } = this.state;
+        const { viewport, mounted } = this.state;
         return (
             <div className='contact-map'>
-                <div className='container-form'>
-                    <ReactMapGL
-                        className='contact-map'
-                        dragPan
-                        height='380px'
-                        mapboxApiAccessToken={TOKEN}
-                        mapStyle='mapbox://styles/mapbox/outdoors-v11'
-                        onViewportChange={this._updateViewport}
-                        scrollZoom={false}
-                        touchAction={'pan-y'}
-                        width='100%'
-                        {...viewport}>
-                        {this._renderShopMarker(SHOP_ADDRESS, 0)}
-                        {this._renderPopup()}
-                        <div className='nav nav-style'>
-                            <NavigationControl />
-                        </div>
-                    </ReactMapGL>
-                </div>
+                <ReactMapGL
+                    className='contact-map'
+                    dragPan
+                    mapboxApiAccessToken={TOKEN}
+                    mapStyle='mapbox://styles/mapbox/outdoors-v11'
+                    scrollZoom={false}
+                    touchAction={'pan-y'}
+                    {...viewport}
+                    onViewportChange={viewport => {
+                        if (mounted) {
+                            this.setState({ viewport });
+                        }
+                    }}>
+                    {this._renderShopMarker(SHOP_ADDRESS, 0)}
+                    {this._renderPopup()}
+                    <div className='nav nav-style'>
+                        <NavigationControl />
+                    </div>
+                </ReactMapGL>
             </div>
         );
     }

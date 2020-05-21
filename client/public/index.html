@@ -43,6 +43,7 @@
             rel="preconnect"
             href="https://storage.googleapis.com/"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://api.mapbox.com" />
         <link rel="preconnect" href="https://api.tiles.mapbox.com" />
         <link
@@ -52,12 +53,41 @@
             type="font/woff2"
             crossorigin="anonymous"
         />
+        <link
+            rel="preload"
+            href="/static/media/outline-icons.cd6c777f.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+            defer
+        />
+        <link rel="stylesheet" href="./styles.css" />
         <title>Impormotriz</title>
     </head>
     <body>
         <noscript
             >You need to enable JavaScript to run this app.</noscript
         >
+        <div
+            class="ipl-progress-indicator"
+            id="ipl-progress-indicator"
+        >
+            <div class="ipl-progress-indicator-head">
+                <div class="first-indicator"></div>
+                <div class="second-indicator"></div>
+            </div>
+            <div class="insp-logo-frame">
+                <img
+                    class="insp-logo-frame-img"
+                    src="./android-chrome-192x192.png"
+                    alt="Impormotriz Logo"
+                />
+            </div>
+        </div>
         <div id="root"></div>
     </body>
 </html>

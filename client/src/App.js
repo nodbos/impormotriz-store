@@ -3,23 +3,19 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import Header from './components/header/header.component';
+import Footer from './components/footer/footer.component';
 import NotFoundPage from './pages/notfound-page/notfound-page.component';
 import ErrorBoundary from './components/error/error-boundary.component';
 import Spinner from './components/spinner/spinner.component';
 import { selectCurrentUser } from './redux/user/user.selector';
 import { checkUserSession } from './redux/user/user.actions';
-import WhatsappBadge from 'react-whatsapp-badge';
-import WhatsappLogo from './assets/img/whatsapp.png';
+
 //import QUERY_MATCHES from './queries.utils';
 
 import PRODUCTO_DATA from './firebase/product.data';
 import { addCollectionAndDocuments } from './firebase/firebase.utils';
 
 import './App.scss';
-
-const Footer = lazy(() =>
-    import('./components/footer/footer.component')
-);
 
 const HomePage = lazy(() =>
     import('./pages/home-page/home-page.component')
@@ -54,9 +50,6 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-//const PHONE_NUMBER = parseInt(process.env.REACT_APP_PHONE_NUMBER);
-const PHONE_NUMBER = 573187157368;
-
 /*if (!QUERY_MATCHES['sm']) {
     console.log('cellphone', QUERY_MATCHES);
 } else {
@@ -89,6 +82,11 @@ class App extends Component {
     //------------------------------------------------------------------------------------//
     //------------------------------------------------------------------------------------//
 
+    // fake authentication Promise
+    authenticate() {
+        return new Promise(resolve => setTimeout(resolve, 2000)); // 2 seconds
+    }
+
     componentDidMount() {
         const { checkUserSession } = this.props;
 
@@ -96,6 +94,20 @@ class App extends Component {
         /*this._uploadDataToFirebase(
             this._uploadAllCategoriesAndArticles
         );*/
+
+        this.authenticate().then(() => {
+            const ele = document.getElementById(
+                'ipl-progress-indicator'
+            );
+            if (ele) {
+                // fade out
+                ele.classList.add('available');
+                setTimeout(() => {
+                    // remove from DOM
+                    ele.outerHTML = '';
+                }, 2000);
+            }
+        });
     }
 
     componentWillUnmount() {
@@ -111,11 +123,12 @@ class App extends Component {
 
     /*{!QUERY_MATCHES['sm'] ? null : <HeaderMenu />}*/
 
+    //<div className='space-div' />
+
     render() {
         return (
             <div className='App'>
                 <div>
-                    <div className='space-div' />
                     <Header queryMatches={true} renderLogo={true} />
                 </div>
                 <ErrorBoundary>
@@ -160,14 +173,6 @@ class App extends Component {
                         </Switch>
                     </Suspense>
                 </ErrorBoundary>
-                <div className='whatsapp'>
-                    <WhatsappBadge
-                        text='Cómo podemos ayudarte?'
-                        phone={PHONE_NUMBER}
-                        image={WhatsappLogo}
-                        style={{ bottom: '8.5em' }}
-                    />
-                </div>
                 <Suspense fallback={<Spinner />}>
                     <Footer />
                 </Suspense>

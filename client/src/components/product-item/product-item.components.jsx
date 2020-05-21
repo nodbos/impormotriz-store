@@ -4,7 +4,6 @@ import { addItem } from '../../redux/cart/cart.actions';
 import { Card, Icon, Image } from 'semantic-ui-react';
 import ButtonSemantic from '../button-semantic/button-semantic.component';
 
-import 'semantic-ui-css/semantic.min.css';
 import './product-item.styles.scss';
 
 const mapDispatchToProps = dispatch => {

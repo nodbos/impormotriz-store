@@ -1,7 +1,6 @@
 import React from 'react';
 import { Icon } from 'semantic-ui-react';
 
-import 'semantic-ui-css/semantic.min.css';
 import './contact-info.styles.scss';
 
 const ContactInfo = () => {
@@ -12,21 +11,18 @@ const ContactInfo = () => {
                     <h1>Información</h1>
                     <div className='info-item'>
                         <Icon
-                            name='address book'
+                            name='map marker alternate'
                             size='big'
                             className='semantic-more'
                         />
                         <h3>
                             Calle 41 # 28-26, Palmira, Valle del Cauca
                         </h3>
-                    </div>
-                    <div className='info-item'>
                         <Icon
-                            name='text telephone'
+                            name='map marker alternate'
                             size='big'
                             className='semantic-more'
                         />
-                        <h3>2814924 - 2713111</h3>
                     </div>
                     <div className='info-item'>
                         <Icon
@@ -34,7 +30,25 @@ const ContactInfo = () => {
                             size='big'
                             className='semantic-more'
                         />
+                        <h3>2814924 - 2713111</h3>
+                        <Icon
+                            name='call'
+                            size='big'
+                            className='semantic-more'
+                        />
+                    </div>
+                    <div className='info-item'>
+                        <Icon
+                            name='mobile alternate'
+                            size='big'
+                            className='semantic-more'
+                        />
                         <h3>318 715 6513 - 316 830 8616</h3>
+                        <Icon
+                            name='mobile alternate'
+                            size='big'
+                            className='semantic-more'
+                        />
                     </div>
                 </div>
             </div>

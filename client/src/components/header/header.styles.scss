@@ -1,11 +1,10 @@
 @import '../../master';
 
 .header-component {
-    background-color: $color_primary;
+    background-color: $color_terciary_dark;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    position: fixed;
     top: 0;
     margin: 0;
     padding: 0;
@@ -16,22 +15,36 @@
     -moz-box-shadow: $shadow_value;
     box-shadow: $shadow_value;
 
+    .badges-container {
+        width: 100px;
+        margin: 60px 20px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        right: 0;
+
+        @media screen and (min-width: $break_point) {
+            margin: 0 20px;
+        }
+    }
+
     .logo-container {
         width: 100%;
         margin: $padding_value 0;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         cursor: pointer;
 
         @media screen and (min-width: $break_point) {
             margin: 0;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .logo {
             @media screen and (min-width: $break_point) {
-                margin: $padding_value ($padding_value * 1.5);
+                margin: $padding_value/2 auto 0;
             }
         }
 

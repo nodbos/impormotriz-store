@@ -5,12 +5,15 @@
 
     @media screen and (min-width: $break_point) {
         height: 100%;
-        padding-top: 10px;
-        width: 40%;
+        width: 35%;
     }
     .container-form {
         @media screen and (min-width: $break_point) {
             width: 100%;
+
+            -webkit-box-shadow: unset;
+            -moz-box-shadow: unset;
+            box-shadow: unset;
         }
     }
 
@@ -25,8 +28,6 @@
         h1 {
             text-align: center;
             @media screen and (min-width: $break_point) {
-                text-align: left;
-                margin-left: 55px;
                 font-size: 3em;
                 margin-bottom: 30px;
             }
@@ -43,11 +44,6 @@
             h3 {
                 margin: 0 auto;
                 text-align: center;
-
-                @media screen and (min-width: $break_point) {
-                    margin: unset;
-                    text-align: left;
-                }
             }
         }
     }

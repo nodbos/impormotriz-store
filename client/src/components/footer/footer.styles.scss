@@ -11,14 +11,15 @@
 
     .contact-desktop {
         height: 450px;
-        padding: $padding_value;
-        background-color: #191919;
+        padding: $padding_value $padding_value $padding_value 0;
+        background-color: $color_primary;
         width: 100%;
         display: flex;
-        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
 
         .container-form {
-            background-color: #191919;
+            background-color: $color_primary;
             color: white;
         }
 
@@ -30,28 +31,17 @@
     }
 
     .footer-information {
-        height: 100px;
-        padding: $padding_value ($padding_value * 3);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: $color_quaternary;
+        height: 60px;
+        padding: $padding_value;
+        background-color: darken($color_primary, 20%);
 
-        .social-container {
+        .copyright {
+            color: $color_terciary;
             height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto;
-            cursor: pointer;
-            .social-item {
-                margin: 0 $padding_value;
-            }
-        }
-
-        .copyright {
-            color: $color_quaternary;
-            display: none;
+            font-size: 1.2em;
         }
     }
 }

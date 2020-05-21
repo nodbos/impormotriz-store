@@ -6,6 +6,8 @@
 
     @media screen and (min-width: $break_point) {
         margin-bottom: unset;
+        display: flex;
+        align-items: center;
     }
 
     .contact-desktop {
