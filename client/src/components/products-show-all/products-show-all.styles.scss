@@ -14,7 +14,11 @@
         @media screen and (min-width: $break_point) {
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content: space-between;
+            width: 100%;
+            .ui.card.product-item {
+                width: 320px;
+            }
         }
     }
 }

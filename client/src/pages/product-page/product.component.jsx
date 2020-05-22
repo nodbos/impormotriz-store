@@ -55,11 +55,13 @@ const ProductPage = ({ product }) => {
 
     if (product !== undefined) {
         const { title, articulos } = product;
-
         return (
             <div className='product-page'>
                 <ButtonBack />
-                <h1 className='title'>{title}</h1>
+                {title === 'Todo' ? null : (
+                    <h1 className='title'>{title.toUpperCase()}</h1>
+                )}
+
                 <div className='ui equal width grid'>
                     {articulos.map(articulo => (
                         <ProductItem

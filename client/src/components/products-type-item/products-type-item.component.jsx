@@ -17,7 +17,9 @@ const ProductsTypeItem = ({
     match,
     extraClass,
 }) => {
-    //console.log(extraClass);
+    //console.log(title);
+
+    let iUrl = require(`../../assets/img/${imageUrl}`);
 
     return (
         <div
@@ -27,7 +29,7 @@ const ProductsTypeItem = ({
             }>
             <div
                 style={{
-                    backgroundImage: `url(${imageUrl})`,
+                    backgroundImage: `url(${iUrl})`,
                 }}
                 className='background-image'></div>
         </div>

@@ -21,8 +21,9 @@
         background-image: url('../../assets/img/404.png');
         background-size: cover;
         background-position: center;
-        width: 40vh;
-        height: 40vh;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 300px;
         margin: 0 auto;
         margin-top: -$padding_value;
         margin-bottom: $padding_value/2;
@@ -30,8 +31,8 @@
 
         @media screen and (min-width: $break_point) {
             font-size: 10em;
-            width: 50vh;
-            height: 50vh;
+            width: 100%;
+            height: 380px;
             margin-top: -$padding_value * 2;
         }
     }

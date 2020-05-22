@@ -1,17 +1,21 @@
 import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
 
 import './history-item.styles.scss';
 
-const HistoryItem = ({ title, description, imageUrl }) => {
+const HistoryItem = ({ title, description, imageUrl, side }) => {
     return (
-        <Card className='history-item'>
-            <Image src={imageUrl} wrapped ui={false} />
-            <Card.Content>
-                <Card.Header>{title}</Card.Header>
-                <Card.Description>{description}</Card.Description>
-            </Card.Content>
-        </Card>
+        <div className={`history-item ${side ? 'left' : 'right'}`}>
+            <div
+                className={`history-img ${side ? 'left' : 'right'}`}
+                style={{
+                    backgroundImage: `url(${imageUrl})`,
+                }}
+            />
+            <div className='history-content'>
+                <h1>{title}</h1>
+                <p>{description}</p>
+            </div>
+        </div>
     );
 };
 

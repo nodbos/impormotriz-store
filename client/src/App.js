@@ -9,6 +9,7 @@ import ErrorBoundary from './components/error/error-boundary.component';
 import Spinner from './components/spinner/spinner.component';
 import { selectCurrentUser } from './redux/user/user.selector';
 import { checkUserSession } from './redux/user/user.actions';
+//import WithLoadingScreen from './components/with-loading-screen/with-loading-screen.component';
 
 //import QUERY_MATCHES from './queries.utils';
 
@@ -57,6 +58,11 @@ const mapDispatchToProps = dispatch => {
 }*/
 
 class App extends Component {
+    /*state = {
+        loading: true,
+        available: false,
+    };*/
+
     unsubscribeFromAuth = null;
 
     //------------------------------------------------------------------------------------//
@@ -83,8 +89,8 @@ class App extends Component {
     //------------------------------------------------------------------------------------//
 
     // fake authentication Promise
-    authenticate() {
-        return new Promise(resolve => setTimeout(resolve, 2000)); // 2 seconds
+    _authenticate() {
+        return new Promise(resolve => setTimeout(resolve, 2000));
     }
 
     componentDidMount() {
@@ -95,7 +101,11 @@ class App extends Component {
             this._uploadAllCategoriesAndArticles
         );*/
 
-        this.authenticate().then(() => {
+        this._authenticate().then(() => {
+            /*this.setState({ available: true });
+            setTimeout(() => {
+                this.setState({ loading: false });
+            }, 1000);*/
             const ele = document.getElementById(
                 'ipl-progress-indicator'
             );
@@ -126,6 +136,21 @@ class App extends Component {
     //<div className='space-div' />
 
     render() {
+        /*const { loading, available } = this.state;
+
+        if (loading) {
+            // if your component doesn't have to wait for an async action, remove this block
+            console.log(available);
+            return (
+                <div
+                    className={
+                        available ? 'available' : 'not-available'
+                    }>
+                    <WithLoadingScreen />
+                </div>
+            ); // render null when app is not ready
+        }*/
+
         return (
             <div className='App'>
                 <div>

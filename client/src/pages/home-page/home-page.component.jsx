@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //import { connect } from 'react-redux';
 //import { fetchProductsStart } from '../../redux/shop/shop.actions';
 import WithSlider from '../../components/with-slider/with-slider.component';
-import imgTest from '../../assets/img/impormotriz_exterior_1.jpg';
+import imgTest from '../../assets/img/impormotriz_exterior_1_web.jpg';
 
 import './home-page.styles.scss';
 

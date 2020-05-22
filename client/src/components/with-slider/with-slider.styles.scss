@@ -29,8 +29,7 @@
 }
 
 .arrow {
-    background-color: rgba($color: #ffffff, $alpha: 0.3);
-    border-radius: $padding_value;
+    background-color: rgba($color: #ffffff, $alpha: 0.5);
     border: 0;
     cursor: pointer;
     margin: 0;
@@ -40,10 +39,14 @@
     z-index: 5;
 
     &.right {
+        border-top-left-radius: $padding_value;
+        border-bottom-left-radius: $padding_value;
         right: -$padding_value/2;
     }
 
     &.left {
+        border-top-right-radius: $padding_value;
+        border-bottom-right-radius: $padding_value;
         left: -$padding_value/2;
     }
 

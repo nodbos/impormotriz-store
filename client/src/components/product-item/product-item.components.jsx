@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { addItem } from '../../redux/cart/cart.actions';
 import { Card, Icon, Image } from 'semantic-ui-react';
-import ButtonSemantic from '../button-semantic/button-semantic.component';
+//import ButtonSemantic from '../button-semantic/button-semantic.component';
 
 import './product-item.styles.scss';
 
@@ -14,10 +14,12 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-const ProductItem = ({ item, addItem }) => {
+const ProductItem = ({ item }) => {
+    //, addItem
     const {
         id,
         imageUrl,
+        descripcion,
         nombre,
         precio,
         //cantidad,
@@ -26,7 +28,7 @@ const ProductItem = ({ item, addItem }) => {
         //obsoleto,
         //procedencia,
         referencia,
-        vehiculo_tipo,
+        //vehiculo_tipo,
     } = item;
 
     const nombreCompleto = `${
@@ -37,7 +39,21 @@ const ProductItem = ({ item, addItem }) => {
         return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     }
 
-    //column
+    /*<Card.Content extra>
+                <div className='center aligned'>
+                    <ButtonSemantic
+                        productMargin
+                        onClick={() => {
+                            addItem(item);
+                        }}>
+                        <Icon
+                            name='angle down'
+                            size='big'
+                            className='semantic-more'
+                        />
+                    </ButtonSemantic>
+                </div>
+            </Card.Content>*/
 
     return (
         <Card className='product-item'>
@@ -56,27 +72,7 @@ const ProductItem = ({ item, addItem }) => {
                     </div>
                 </div>
 
-                <Card.Description>
-                    Este repuesto funciona para los siguientes carros:{' '}
-                    {id.split('_')[0] + ' ' + vehiculo_tipo[0]},{' '}
-                    {id.split('_')[0] + ' ' + vehiculo_tipo[1]},{' '}
-                    {id.split('_')[0] + ' ' + vehiculo_tipo[2]}
-                </Card.Description>
-            </Card.Content>
-            <Card.Content extra>
-                <div className='center aligned'>
-                    <ButtonSemantic
-                        productMargin
-                        onClick={() => {
-                            addItem(item);
-                        }}>
-                        <Icon
-                            name='angle down'
-                            size='big'
-                            className='semantic-more'
-                        />
-                    </ButtonSemantic>
-                </div>
+                <Card.Description>{descripcion}</Card.Description>
             </Card.Content>
         </Card>
     );

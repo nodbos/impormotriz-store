@@ -1,19 +1,64 @@
 @import '../../master';
 
-.ui.card.history-item {
-    margin: 0 0 $padding_value !important;
+.history-item {
     border-radius: $padding_value;
-    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 $padding_value;
+    padding: 0;
+    background-color: $color_terciary;
+    width: 100%;
+
+    -webkit-box-shadow: $shadow_value;
+    -moz-box-shadow: $shadow_value;
+    box-shadow: $shadow_value;
 
     @media screen and (min-width: $break_point) {
-        width: 50% !important;
-        margin: 0 auto !important;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 0 auto $padding_value;
+        &.right {
+            flex-direction: row-reverse;
+        }
     }
 
-    .image {
-        img {
-            border-top-left-radius: $padding_value;
-            border-top-right-radius: $padding_value;
+    .history-img {
+        border-top-left-radius: $padding_value;
+        border-top-right-radius: $padding_value;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+        width: 100%;
+
+        @media screen and (min-width: $break_point) {
+            &.left {
+                border-top-left-radius: $padding_value;
+                border-bottom-left-radius: $padding_value;
+                border-top-right-radius: unset;
+                border-bottom-right-radius: unset;
+            }
+            &.right {
+                border-top-right-radius: $padding_value;
+                border-bottom-right-radius: $padding_value;
+                border-top-left-radius: unset;
+                border-bottom-left-radius: unset;
+            }
+            height: 450px;
+            width: 100%;
+        }
+    }
+
+    .history-content {
+        width: 100%;
+        padding: $padding_value/1.5 $padding_value * 1.5;
+        text-align: center;
+
+        @media screen and (min-width: $break_point) {
+            padding: unset;
+            margin: 0 $padding_value * 3;
         }
     }
 }

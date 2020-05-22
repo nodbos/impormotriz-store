@@ -20,7 +20,7 @@ import { selectActiveMenuItem } from '../../redux/menu/menu.selector';
 import './header-menu.styles.scss';
 
 const mapStateToProps = createStructuredSelector({
-    activeItem: selectActiveMenuItem,
+    activeItem: selectActiveMenuItem || 'Inicio',
     currentUser: selectCurrentUser,
 });
 

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { selectProductsForPreview } from '../../redux/shop/shop.selectors';
 import ProductsShowAll from '../products-show-all/products-show-all.component';
-import ButtonBack from '../button-back/button-back.component';
+//import ButtonBack from '../button-back/button-back.component';
 
 import './products-show-some.styles.scss';
 
@@ -24,7 +24,6 @@ const ProductsShowSome = ({ products }) => {
 
     return (
         <div className='product-show-some'>
-            <ButtonBack />
             {newProduct.map(({ id, ...otherProductProps }) => {
                 return (
                     <ProductsShowAll

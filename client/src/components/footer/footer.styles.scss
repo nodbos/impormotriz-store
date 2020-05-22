@@ -10,7 +10,7 @@
     }
 
     .contact-desktop {
-        height: 450px;
+        height: 400px;
         padding: $padding_value $padding_value $padding_value 0;
         background-color: $color_primary;
         width: 100%;
@@ -21,6 +21,9 @@
         .container-form {
             background-color: $color_primary;
             color: white;
+            @media screen and (min-width: $break_point) {
+                margin: 0;
+            }
         }
 
         @media screen and (min-width: $break_point) {

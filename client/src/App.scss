@@ -14,6 +14,15 @@
         text-decoration: none;
         color: $color_quaternary;
     }
+    /*.not-available {
+        opacity: 1;
+    }
+    .available {
+        opacity: 0;
+        -webkit-transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 436ms;
+        -moz-transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 436ms;
+        transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 436ms;
+    }*/
     .App {
         .space-div {
             height: 115px;

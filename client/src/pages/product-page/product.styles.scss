@@ -14,7 +14,10 @@
     .back-button {
         top: 0;
         left: 20px !important;
-        margin-top: 140px !important;
+        margin-top: 200px !important;
+        @media screen and (min-width: $break_point) {
+            margin-top: 290px !important;
+        }
     }
 
     .title {
@@ -26,9 +29,16 @@
     .ui.grid {
         margin: 0 !important;
 
-        @media screen and (min-width: 800px) {
+        @media screen and (min-width: $break_point) {
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    .ui.equal.width.grid {
+        width: 100%;
+        .ui.card.product-item {
+            width: 320px;
         }
     }
 }
