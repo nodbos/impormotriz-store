@@ -6,5 +6,6 @@
 
     @media screen and (min-width: $break_point) {
         margin-bottom: unset;
+        padding: $padding_value $padding_lateral_value;
     }
 }

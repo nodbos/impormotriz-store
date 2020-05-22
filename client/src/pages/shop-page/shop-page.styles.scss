@@ -2,7 +2,20 @@
 
 .shop-page {
     margin-bottom: $padding_value * 3;
+    .shop-filters {
+        margin-top: $padding_value;
+        width: 100%;
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+        padding: $padding_value;
+        display: none;
 
+        @media screen and (min-width: $break_point) {
+            padding: $padding_value $padding_lateral_value;
+            display: flex;
+        }
+    }
     @media screen and (min-width: $break_point) {
         margin-bottom: unset;
     }

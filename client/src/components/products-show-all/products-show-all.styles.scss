@@ -3,22 +3,22 @@
 .products-show-all {
     display: flex;
     flex-direction: column;
+    padding: $padding_value;
 
     .title {
-        margin: $padding_value 0 $padding_value * 2;
-        text-align: right;
+        text-align: center;
+        margin: $padding_value * 2 0;
+
+        @media screen and (min-width: $break_point) {
+            margin: $padding_value * 2 $padding_lateral_value;
+        }
     }
 
     .ui.preview {
-        justify-content: space-between;
+        justify-content: center;
         @media screen and (min-width: $break_point) {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
-            width: 100%;
-            .ui.card.product-item {
-                width: 320px;
-            }
         }
     }
 }

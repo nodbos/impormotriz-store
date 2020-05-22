@@ -8,7 +8,6 @@
     margin-bottom: $padding_value * 3;
 
     @media screen and (min-width: $break_point) {
-        margin-bottom: unset;
     }
 
     .back-button {
@@ -22,8 +21,13 @@
 
     .title {
         width: 100%;
-        text-align: right;
+        text-align: center;
         margin: 10px 0 30px;
+        padding: 0 $padding_lateral_value;
+
+        @media screen and (max-width: $break_point) {
+            padding: 0;
+        }
     }
 
     .ui.grid {
@@ -33,12 +37,6 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-        }
-    }
-    .ui.equal.width.grid {
-        width: 100%;
-        .ui.card.product-item {
-            width: 320px;
         }
     }
 }

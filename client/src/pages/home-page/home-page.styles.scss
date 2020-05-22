@@ -10,14 +10,9 @@
 
 .home-page {
     padding: $padding_value;
-    margin-bottom: $padding_value * 4;
-
-    @media screen and (min-width: $break_point) {
-        margin-bottom: unset;
-    }
 
     div {
-        border-radius: $padding_value/2;
+        border-radius: $padding_value;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -25,5 +20,14 @@
 
     .awssld {
         height: 74vh;
+    }
+
+    @media screen and (min-width: $break_point) {
+        padding: unset;
+        padding-bottom: $padding_value/2;
+        margin-bottom: unset;
+        div {
+            border-radius: unset;
+        }
     }
 }

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 //import { fetchProductsStart } from '../../redux/shop/shop.actions';
 import WithSlider from '../../components/with-slider/with-slider.component';
 import imgTest from '../../assets/img/impormotriz_exterior_1_web.jpg';
+import UsPage from '../us-page/us-page.component';
 
 import './home-page.styles.scss';
 
@@ -29,12 +30,15 @@ class HomePage extends Component {
 
     render() {
         return (
-            <div className='home-page'>
-                <WithSlider>
-                    <CustomDiv link={imgTest} />
-                    <CustomDiv link={imgTest} />
-                    <CustomDiv link={imgTest} />
-                </WithSlider>
+            <div>
+                <div className='home-page'>
+                    <WithSlider>
+                        <CustomDiv link={imgTest} />
+                        <CustomDiv link={imgTest} />
+                        <CustomDiv link={imgTest} />
+                    </WithSlider>
+                </div>
+                <UsPage />
             </div>
         );
     }

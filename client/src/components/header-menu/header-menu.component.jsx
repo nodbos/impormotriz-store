@@ -83,7 +83,7 @@ const HeaderMenu = ({
                     active={activeItem === titulos[1]}
                     onClick={() => setMenuActiveItem(titulos[1])}
                     as={Link}
-                    to='/catalogo'>
+                    to='/catalogo/todo'>
                     <div className='menu-content'>
                         <IconContext.Provider
                             value={{

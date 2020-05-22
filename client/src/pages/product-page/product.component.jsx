@@ -2,7 +2,7 @@ import React from 'react';
 import ProductItem from '../../components/product-item/product-item.components';
 import { connect } from 'react-redux';
 import { selectProduct } from '../../redux/shop/shop.selectors';
-import ButtonBack from '../../components/button-back/button-back.component';
+//import ButtonBack from '../../components/button-back/button-back.component';
 
 import './product.styles.scss';
 
@@ -53,11 +53,12 @@ const ProductPage = ({ product }) => {
     //= DEFAULT_PRODUCT
     //console.log(product);
 
+    //<ButtonBack />
+
     if (product !== undefined) {
         const { title, articulos } = product;
         return (
             <div className='product-page'>
-                <ButtonBack />
                 {title === 'Todo' ? null : (
                     <h1 className='title'>{title.toUpperCase()}</h1>
                 )}

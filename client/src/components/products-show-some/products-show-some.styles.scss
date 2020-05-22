@@ -1,5 +1,9 @@
 @import '../../master';
 
 .product-show-some {
-    padding: $padding_value;
+    padding: 0 $padding_lateral_value $padding_value;
+
+    @media screen and (max-width: $break_point) {
+        padding: 0;
+    }
 }
