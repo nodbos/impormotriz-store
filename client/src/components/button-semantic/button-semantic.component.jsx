@@ -7,6 +7,7 @@ const ButtonSemantic = ({
     secondColorCombination,
     backButton,
     productMargin,
+    chatButton,
     ...otherProps
 }) => {
     return (
@@ -15,8 +16,8 @@ const ButtonSemantic = ({
                 secondColorCombination
                     ? 'second-color'
                     : 'first-color'
-            } ${
-                productMargin ? 'product-margin' : ''
+            } ${productMargin ? 'product-margin' : ''} ${
+                chatButton ? 'chat-button' : ''
             } semantic-button`}
             {...otherProps}>
             {children}

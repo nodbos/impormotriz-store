@@ -1,33 +1,38 @@
 @import '../../master';
 
-.custom-div {
-    height: 68vh;
-
-    @media screen and (min-width: $break_point) {
-        height: 82vh;
-    }
-}
-
 .home-page {
-    padding: $padding_value;
+    .home-slider {
+        padding: $padding_value;
 
-    div {
-        border-radius: $padding_value;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    .awssld {
-        height: 74vh;
-    }
-
-    @media screen and (min-width: $break_point) {
-        padding: unset;
-        padding-bottom: $padding_value/2;
-        margin-bottom: unset;
         div {
-            border-radius: unset;
+            border-radius: $padding_value;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .awssld {
+            height: 74vh;
+        }
+
+        @media screen and (min-width: $break_point) {
+            padding: unset;
+            padding-bottom: $padding_value/2;
+            margin-bottom: unset;
+            div {
+                border-radius: unset;
+            }
+        }
+    }
+
+    .home-content {
+        width: 100%;
+        height: 100%;
+        padding: $padding_value;
+        margin-bottom: $padding_value * 4;
+
+        @media screen and (min-width: $break_point) {
+            padding: $padding_value $padding_lateral_value;
         }
     }
 }

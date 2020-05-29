@@ -1,17 +1,23 @@
 @import '../../master';
 
 .shop-filters-item {
-    width: 180px;
+    width: 100%;
     height: 100%;
     border-radius: $padding_value/2;
     background-color: $color_terciary;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto 150%;
 
     -webkit-box-shadow: $shadow_value;
     -moz-box-shadow: $shadow_value;
     box-shadow: $shadow_value;
+
+    @media screen and (min-width: $break_point) {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
 
     &.active {
         background-color: $color_secondary;

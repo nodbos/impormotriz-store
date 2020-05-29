@@ -7,7 +7,7 @@
 
     .title {
         text-align: center;
-        margin: $padding_value * 2 0;
+        margin: 0 0 $padding_value * 2;
 
         @media screen and (min-width: $break_point) {
             margin: $padding_value * 2 $padding_lateral_value;

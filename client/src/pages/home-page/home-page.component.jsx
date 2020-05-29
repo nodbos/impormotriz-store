@@ -2,25 +2,14 @@ import React, { Component } from 'react';
 //import { connect } from 'react-redux';
 //import { fetchProductsStart } from '../../redux/shop/shop.actions';
 import WithSlider from '../../components/with-slider/with-slider.component';
-import imgTest from '../../assets/img/impormotriz_exterior_1_web.jpg';
-import UsPage from '../us-page/us-page.component';
+import HistoriesDirectory from '../../components/histories-directory/histories-directory.component';
+import SliderItem from '../../components/slider-item/slider-item.component';
 
 import './home-page.styles.scss';
 
 /*const mapDispatchToProps = dispatch => ({
     fetchProductsStart: () => dispatch(fetchProductsStart('posts')),
 });*/
-
-const CustomDiv = ({ link }) => {
-    return (
-        <div
-            className='custom-div'
-            style={{
-                backgroundImage: `url(${link})`,
-            }}
-        />
-    );
-};
 
 class HomePage extends Component {
     componentDidMount() {
@@ -30,15 +19,39 @@ class HomePage extends Component {
 
     render() {
         return (
-            <div>
-                <div className='home-page'>
-                    <WithSlider>
-                        <CustomDiv link={imgTest} />
-                        <CustomDiv link={imgTest} />
-                        <CustomDiv link={imgTest} />
+            <div className='home-page'>
+                <div className='home-slider'>
+                    <WithSlider
+                        desktopItem={1}
+                        tabletItem={1}
+                        mobileItem={1}>
+                        <SliderItem
+                            imgNum={1}
+                            chatButton
+                            sideContent
+                            textArray={[
+                                'Nuestros canales digitales están disponibles para ti.',
+                                'Comunicate con nosotros'.toUpperCase(),
+                                'Vía teléfono, correo electrónico o WhatsApp.',
+                            ]}
+                        />
+                        <SliderItem imgNum={2} />
+                        <SliderItem imgNum={3} />
                     </WithSlider>
                 </div>
-                <UsPage />
+                <div className='home-content'>
+                    <HistoriesDirectory />
+                    <WithSlider
+                        desktopItem={3}
+                        tabletItem={2}
+                        mobileItem={2}>
+                        <SliderItem imgNum={1} isLogo />
+                        <SliderItem imgNum={2} isLogo />
+                        <SliderItem imgNum={3} isLogo />
+                        <SliderItem imgNum={4} isLogo />
+                        <SliderItem imgNum={5} isLogo />
+                    </WithSlider>
+                </div>
             </div>
         );
     }

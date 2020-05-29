@@ -6,12 +6,7 @@ import { fetchProductsStart } from '../../redux/shop/shop.actions';
 import Spinner from '../../components/spinner/spinner.component';
 import ErrorBoundary from '../../components/error/error-boundary.component';
 
-import chevrolet from '../../assets/img/carLogoChevrolet.png';
-import hyundai from '../../assets/img/carLogoHyundai.png';
-import kia from '../../assets/img/carLogoKia.png';
-import mazda from '../../assets/img/carLogoMazda.png';
-import renault from '../../assets/img/carLogoRenault.png';
-import todo from '../../assets/img/carLogoTodo.png';
+import FILTER_DATA from '../../firebase/filter.data';
 
 import FilterItem from '../../components/filter-item/filter-item.component';
 
@@ -35,33 +30,6 @@ const mapDispatchToProps = dispatch => ({
     fetchProductsStart: () =>
         dispatch(fetchProductsStart('products')),
 });
-
-const FILTER_DATA = [
-    {
-        link: '/catalogo/todo',
-        imageUrl: todo,
-    },
-    {
-        link: '/catalogo/chevrolet',
-        imageUrl: chevrolet,
-    },
-    {
-        link: '/catalogo/hyundai',
-        imageUrl: hyundai,
-    },
-    {
-        link: '/catalogo/kia',
-        imageUrl: kia,
-    },
-    {
-        link: '/catalogo/mazda',
-        imageUrl: mazda,
-    },
-    {
-        link: '/catalogo/renault',
-        imageUrl: renault,
-    },
-];
 
 class ShopPage extends Component {
     state = {

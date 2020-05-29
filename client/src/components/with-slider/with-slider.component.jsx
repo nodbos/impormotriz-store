@@ -6,21 +6,6 @@ import { IconContext } from 'react-icons';
 import 'react-multi-carousel/lib/styles.css';
 import './with-slider.styles.scss';
 
-const responsive = {
-    desktop: {
-        breakpoint: { max: 3000, min: 1024 },
-        items: 1,
-    },
-    tablet: {
-        breakpoint: { max: 1024, min: 464 },
-        items: 1,
-    },
-    mobile: {
-        breakpoint: { max: 464, min: 0 },
-        items: 1,
-    },
-};
-
 const iconSize = 5;
 
 const CustomArrow = ({ onClick, side }) => {
@@ -42,7 +27,12 @@ const CustomArrow = ({ onClick, side }) => {
 
 //<div className='meter' />
 
-const WithSlider = ({ children }) => {
+const WithSlider = ({
+    children,
+    desktopItem,
+    tabletItem,
+    mobileItem,
+}) => {
     return (
         <div className='progress-bar'>
             <Carousel
@@ -51,7 +41,20 @@ const WithSlider = ({ children }) => {
                 autoPlaySpeed={5000}
                 draggable
                 infinite
-                responsive={responsive}
+                responsive={{
+                    desktop: {
+                        breakpoint: { max: 3000, min: 1024 },
+                        items: desktopItem,
+                    },
+                    tablet: {
+                        breakpoint: { max: 1024, min: 464 },
+                        items: tabletItem,
+                    },
+                    mobile: {
+                        breakpoint: { max: 464, min: 0 },
+                        items: mobileItem,
+                    },
+                }}
                 showDots={false}
                 swipeable
                 customRightArrow={
